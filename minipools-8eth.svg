@@ -1502,6 +1502,11 @@ L 917.045455 195.835493
 z
 " clip-path="url(#p60880e0bb3)" style="fill: #fa9b02"/>
    </g>
+   <g id="line2d_35">
+    <path d="M 436.498328 256.32 
+L 436.498328 34.56 
+" clip-path="url(#p60880e0bb3)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #1f77b4; stroke-width: 1.5"/>
+   </g>
    <g id="patch_48">
     <path d="M 135 256.32 
 L 135 34.56 
