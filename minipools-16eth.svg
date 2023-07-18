@@ -1411,16 +1411,16 @@ z
    <g id="patch_4">
     <path d="M 183.468867 256.32 
 L 193.892279 256.32 
-L 193.892279 91.078804 
-L 183.468867 91.078804 
+L 193.892279 91.95588 
+L 183.468867 91.95588 
 z
 " clip-path="url(#p60880e0bb3)" style="fill: #f7b852"/>
    </g>
    <g id="patch_5">
     <path d="M 193.892279 256.32 
 L 204.315691 256.32 
-L 204.315691 152.649568 
-L 193.892279 152.649568 
+L 204.315691 151.772492 
+L 193.892279 151.772492 
 z
 " clip-path="url(#p60880e0bb3)" style="fill: #fa9b02"/>
    </g>
@@ -1985,8 +1985,8 @@ z
 " clip-path="url(#p60880e0bb3)" style="fill: #fa9b02"/>
    </g>
    <g id="line2d_51">
-    <path d="M 488.006259 256.32 
-L 488.006259 34.56 
+    <path d="M 488.00819 256.32 
+L 488.00819 34.56 
 " clip-path="url(#p60880e0bb3)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #1f77b4; stroke-width: 1.5"/>
    </g>
    <g id="patch_76">
@@ -2011,7 +2011,7 @@ L 972 34.56
    </g>
    <g id="text_28">
     <!-- average -->
-    <g transform="translate(499.513477 171.190313)rotate(-90)scale(0.1 -0.1)">
+    <g transform="translate(499.515407 171.190313)rotate(-90)scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-67" d="M 2906 1791 
 Q 2906 2416 2648 2759 
