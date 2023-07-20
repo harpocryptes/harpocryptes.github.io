@@ -1990,8 +1990,8 @@ L 474.2262 34.56
 " clip-path="url(#p60880e0bb3)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #1f77b4; stroke-width: 1.5"/>
    </g>
    <g id="line2d_52">
-    <path d="M 147.328263 256.32 
-L 147.328263 34.56 
+    <path d="M 373.447413 256.32 
+L 373.447413 34.56 
 " clip-path="url(#p60880e0bb3)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #1f77b4; stroke-width: 1.5"/>
    </g>
    <g id="patch_76">
@@ -2064,7 +2064,7 @@ z
    </g>
    <g id="text_29">
     <!-- median -->
-    <g transform="translate(158.835481 169.462969)rotate(-90)scale(0.1 -0.1)">
+    <g transform="translate(384.95463 169.462969)rotate(-90)scale(0.1 -0.1)">
      <defs>
       <path id="DejaVuSans-6d" d="M 3328 2828 
 Q 3544 3216 3844 3400 
