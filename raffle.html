@@ -15,11 +15,11 @@
 	<h1>Rocket Fuel Contributors Raffle!</h1>
 	<div id="main">
 		<textarea id="contestants" rows="20" cols="30" placeholder="Paste contributors and contribution counts (two columns) here."></textarea>
-		<textarea id="winners" rows="10" cols="30" style="text-align: center; padding: 0.2em 5em"></textarea>
+		<textarea id="winners" rows="8" cols="30" style="text-align: center; padding: 0.2em 5em"></textarea>
 	</div>
 	<div><input id="go" type="button" value="Go!" onclick="pick()"></div>
 <script>
-	const WINNERS = 12
+	const WINNERS = 10
 	
 	async function pick() {
 		document.getElementById("go").disabled = true
