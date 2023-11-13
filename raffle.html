@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en">
+<head>
+	<title>Rocket Fuel Contributors Raffle</title>
+	<style>
+		html { height: 100% }
+		body { background-color: #fca265; background-image: url("https://rocketpool.net/assets/header-bg-wide-3cd4678c.webp"); height: 90% }
+		h1 { text-align: center }
+		#main { margin: 1em; height: 60% }
+		textarea { font-size: 20px; margin: auto 5em; vertical-align: middle }
+		input { font-size: 30px; padding: 0.1em 1em }
+		div { text-align: center }
+	</style>
+</head>
+<body>
+	<h1>Rocket Fuel Contributors Raffle!</h1>
+	<div id="main">
+		<textarea id="contestants" rows="20" cols="30" placeholder="Paste contributors and contribution counts (two columns) here."></textarea>
+		<textarea id="winners" rows="10" cols="30" style="text-align: center; padding: 0.2em 5em"></textarea>
+	</div>
+	<div><input id="go" type="button" value="Go!" onclick="pick()"></div>
+<script>
+	const WINNERS = 10
+	
+	async function pick() {
+		document.getElementById("go").disabled = true
+		let contestants = document.getElementById("contestants").value
+		
+		// Clean up names by getting rid of repeated spaces
+		contestants = contestants.trim().replaceAll(/ +/g, " ")
+		
+		// Create tickets
+		let tickets = []
+		for (let c of contestants.split('\n')) {
+			c = c.split('\t')
+			const name = c[0].replace(/#.*/, "")
+			const numEntries = +c[1]
+			tickets = tickets.concat(new Array(numEntries).fill(name))
+		}
+		console.log(tickets)
+		
+		// Decide winners!
+		document.getElementById("winners").value = ""
+		for (let rank = 1; rank <= WINNERS; rank++) {
+			const winner = tickets[Math.floor(Math.random() * tickets.length)]
+			console.log(winner)
+			tickets = tickets.filter(c => c != winner) // Make sure each contestant can only win once
+			document.getElementById("go").value = rank
+			if (rank > 1)
+				document.getElementById("winners").value += "\n"
+			for (c of winner) {
+				document.getElementById("winners").value += c
+				await sleep(30)
+			}
+			await sleep(1000)
+		}
+		
+		document.getElementById("go").disabled = false
+		document.getElementById("go").value = "Go!"
+	}
+	
+	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+</script>
+</body>
