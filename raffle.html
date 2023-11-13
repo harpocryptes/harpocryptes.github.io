@@ -41,13 +41,14 @@
 		// Decide winners!
 		document.getElementById("winners").value = ""
 		for (let rank = 1; rank <= WINNERS; rank++) {
-			const winner = rank + ". " + tickets[Math.floor(Math.random() * tickets.length)]
+			const winner = tickets[Math.floor(Math.random() * tickets.length)]
 			console.log(winner)
 			tickets = tickets.filter(c => c != winner) // Make sure each contestant can only win once
+			const winner_text = rank + ". " + winner
 			document.getElementById("go").value = rank
 			if (rank > 1)
 				document.getElementById("winners").value += "\n"
-			for (c of winner) {
+			for (c of winner_text) {
 				document.getElementById("winners").value += c
 				await sleep(30)
 			}
