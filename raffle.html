@@ -30,10 +30,15 @@
 		
 		// Create tickets
 		let tickets = []
-		for (let c of contestants.split('\n')) {
-			c = c.split('\t')
+		for (const contestant of contestants.split('\n')) {
+			const c = contestant.split('\t')
 			const name = c[0].replace(/#.*/, "")
 			const numEntries = +c[1]
+			if (isNaN(numEntries) || c.length != 2) {
+				alert("Invalid formatting for this line: " + contestant)
+				tickets = []
+				break
+			}
 			tickets = tickets.concat(new Array(numEntries).fill(name))
 		}
 		console.log(tickets)
