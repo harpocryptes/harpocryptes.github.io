@@ -32,10 +32,15 @@
 		let tickets = []
 		for (const contestant of contestants.split('\n')) {
 			const c = contestant.split('\t')
-			const name = c[0].replace(/#.*/, "")
+			const name = c[0].replace(/#.*/, "").trim()
 			const numEntries = +c[1]
 			if (isNaN(numEntries) || c.length != 2) {
 				alert("Invalid formatting for this line: " + contestant)
+				tickets = []
+				break
+			}
+			if (tickets.includes(name)) {
+				alert(name + " appears twice in the list of contestants")
 				tickets = []
 				break
 			}
